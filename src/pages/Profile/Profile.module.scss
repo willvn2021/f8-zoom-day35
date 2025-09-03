@@ -1,0 +1,107 @@
+$title-color: #0f172a;
+$green-color: #16a34a;
+$link-color: #2563eb;
+$info-text-color: #1f2937;
+$icon-color: #94a3b8;
+
+.profileWrapper {
+    width: min(460px, 92vw);
+}
+
+.card {
+    background: var(--card-bg, #ffffff);
+    border-radius: calc(var(--radius, 24px) + 6px);
+    padding: 18px;
+    box-shadow: var(--shadow, 0 22px 60px rgba(15, 23, 42, 0.12));
+}
+
+.media {
+    height: 340px;
+    border-radius: var(--radius, 24px);
+    overflow: hidden;
+    background: #eef1f7;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transform: scale(1.02);
+    }
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    font-size: 22px;
+    color: $title-color;
+    margin: 16px 6px 6px;
+
+    .verified {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        color: $green-color;
+    }
+}
+
+.subtitle {
+    margin: 0 6px 12px;
+    color: var(--muted, #6b7280);
+}
+
+.list {
+    display: grid;
+    gap: 10px;
+    margin: 10px 6px 6px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    color: $info-text-color;
+
+    .icon {
+        width: 18px;
+        height: 18px;
+        margin-top: 2px;
+        color: $icon-color;
+        flex-shrink: 0;
+    }
+
+    .label {
+        color: var(--muted, #6b7280);
+        width: 92px;
+        flex-shrink: 0;
+    }
+
+    .value {
+        color: $title-color;
+        word-break: break-word;
+
+        a {
+            color: $link-color;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+// Trạng thái loading
+.loading {
+    background: var(--card-bg, #ffffff);
+    padding: 16px 22px;
+    border-radius: 14px;
+    box-shadow: var(--shadow, 0 22px 60px rgba(15, 23, 42, 0.12));
+    color: var(--muted, #6b7280);
+    font-weight: 700;
+    text-align: center;
+}
